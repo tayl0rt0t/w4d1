@@ -32,3 +32,94 @@ class Hamster{
 }
 
 const H1 = new Hamster('Tay','Hamtaro');
+/*
+Person
+attributes:
+
+name - set name from parameter in constructor method
+age - initially 0
+height - initially 0
+weight - initially 0
+mood - integer starting at 0 initially
+hamsters - empty array initially
+bankAccount - initially set to 0
+methods:
+
+getName() - returns name
+getAge() - returns age
+getWeight() - returns weight
+greet() - logs a message with person's name
+eat() - increment weight, increment mood
+exercise() - decrement weight
+/ageUp() - increment age, increment height, increment weight, decrement mood, increment bank account by 10 (birthday money)/
+buyHamster(hamster) - push the hamster object onto the hamster array, increment mood by 10, decrement bankAccount by the value of the hamster (hint: use getPrice())
+
+*/
+
+class Person {
+    constructor(name, age, height, weight, mood, bankAccount, ...hamsters){
+        this.name = name,
+        age = 0,
+        this.age = age,
+        height = 0
+        this.height = height,
+        weight = 0,
+        this.weight = weight,
+        mood = 0,
+        this.mood = mood,
+        bankAccount = 0,
+        this.bankAccount = bankAccount,
+        this.hamsters = hamsters
+
+    }
+    getName(){
+        console.log(this.name);
+        return this.name;
+    }
+    getAge(){
+        console.log(this.age);
+        return this.age;
+    }
+    getWeight(){
+        console.log(this.weight);
+        return this.weight;
+    }
+    greet(){
+        console.log(`Hello, ${this.name}!`)
+    }
+    eat(){
+        this.weight++;
+        this.mood++
+        console.log(`weight: ${this.weight} mood: ${this.mood}`);
+    }
+    excercise(){
+        this.weight--;
+        console.log(this.weight);
+    }
+   
+    ageUp(){
+        this.age++,
+        this.height++,
+        this.weight++,
+        this.mood--,
+        this.bankAccount += 10
+    }
+/*
+buyHamster(hamster) - push the hamster object onto the hamster array, increment mood by 10, decrement bankAccount by the value of the hamster (hint: use getPrice())
+*/
+    buyHamster(hamster){
+        this.hamsters.push(hamster);
+        this.mood += 10;
+        this.bankAccount = this.bankAccount - hamster.price;
+        
+    }
+};
+const P1 = new Person('Tay',32,67,145,3,20);
+P1.ageUp();
+P1.ageUp();
+P1.ageUp();
+
+P1.buyHamster(H1);
+
+
+console.log(P1.bankAccount);

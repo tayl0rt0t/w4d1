@@ -77,7 +77,7 @@ class Person {
         return this.name;
     }
     getAge(){
-        console.log(this.age);
+        console.log(`age: ${this.age}`);
         return this.age;
     }
     getWeight(){
@@ -118,8 +118,70 @@ const P1 = new Person('Tay',32,67,145,3,20);
 P1.ageUp();
 P1.ageUp();
 P1.ageUp();
-
+P1.getAge();
 P1.buyHamster(H1);
 
 
 console.log(P1.bankAccount);
+
+/*
+Instantiate a new Person named Timmy
+Age Timmy five years
+At this point Timmy's a little bummed. As a precocious child, he feels he's "seen it all" already. Have him eat five times.
+Now Timmy's a little heavier than he wants to be. Kindergarten's coming up and he wants to look good. Have him exercise five times
+Age Timmy 9 years
+Create a hamster named "Gus"
+Set Gus's owner to the string "Timmy"
+Have Timmy "buy" Gus
+Age Timmy 15 years
+Have Timmy eat twice
+Have Timmy exercise twice
+*/
+const Timmy = new Person;
+Timmy.ageUp();
+Timmy.ageUp();
+Timmy.ageUp();
+Timmy.ageUp();
+Timmy.ageUp();
+Timmy.eat();
+Timmy.eat();
+Timmy.eat();
+Timmy.eat();
+Timmy.eat();
+Timmy.excercise();
+Timmy.excercise();
+Timmy.excercise();
+Timmy.excercise();
+Timmy.excercise();
+Timmy.ageUp();
+Timmy.ageUp();
+Timmy.ageUp();
+Timmy.ageUp();
+Timmy.ageUp();
+Timmy.ageUp();
+Timmy.ageUp();
+Timmy.ageUp();
+Timmy.ageUp();
+
+const Gus = new Hamster("Timmy",'Gus',);
+Timmy.buyHamster(Gus);
+Timmy.ageUp();
+Timmy.ageUp();
+Timmy.ageUp();
+Timmy.ageUp();
+Timmy.ageUp();
+Timmy.ageUp();
+Timmy.ageUp();
+Timmy.ageUp();
+Timmy.ageUp();
+Timmy.ageUp();
+Timmy.ageUp();
+Timmy.ageUp();
+Timmy.ageUp();
+Timmy.ageUp();
+Timmy.ageUp();
+
+Timmy.eat();
+Timmy.eat();
+Timmy.excercise();
+Timmy.excercise();

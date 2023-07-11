@@ -185,3 +185,28 @@ Timmy.eat();
 Timmy.eat();
 Timmy.excercise();
 Timmy.excercise();
+
+/*
+Chef should be a factory of Dinner
+Add a constructor to dinner that sets the string properties, appetizer, entree and dessert.
+Add a method on chef that takes three arguments and returns a new Dinner based on those arguments.
+Have the Chef create 3 dinners, log the dinners
+*/
+class Dinner{
+    constructor(appetizer, entree, dessert){
+        this.appetizer = appetizer,
+        this.entree = entree,
+        this.dessert = dessert
+    }
+}
+class Chef{
+    generateDinner(app,en,dess){
+        const spread = new Dinner(app,en,dess);
+        console.log(spread);
+    }
+}
+
+const Bourdain = new Chef;
+Bourdain.generateDinner('Beef TareTare', 'Duck Confit', 'Creme Brulee');
+Bourdain.generateDinner('Buffalo wings', 'Porterhouse Steak', 'Spiked Rootbeer float');
+Bourdain.generateDinner('Poached Eggs','A single cheerio', 'basement scrapings');
